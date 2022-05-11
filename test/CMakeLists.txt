@@ -1,0 +1,2 @@
+add_subdirectory(cpp_googletest_unittest)
+add_subdirectory(cpp_texttest)
