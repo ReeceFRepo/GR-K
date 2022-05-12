@@ -21,8 +21,8 @@ void GildedRose::updateNormal(Item& item){
 }
 
 void GildedRose::updateBrie(Item& item){
-    item.m_quality = item.m_quality == m_MAXQUAILTY ? m_MAXQUAILTY : ++item.m_quality;
-
+    if(item.m_quality < m_MAXQUAILTY)
+        ++item.m_quality;
 }
 
 void GildedRose::updatePasses(Item& item){
@@ -94,7 +94,7 @@ void GildedRose::setItem(Item&& data){
 
 void GildedRose::printItems(){
     for(auto& item : m_Stock){
-    std::cout << "  name: " << item.m_name << "    SellIn: " <<  item.m_sellIn << "    Quality: "<< item.m_quality << std::endl;
+        std::cout << "  name: " << item.m_name << "    SellIn: " <<  item.m_sellIn << "    Quality: "<< item.m_quality << std::endl;
     }
     
 }
