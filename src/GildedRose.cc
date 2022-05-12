@@ -49,7 +49,7 @@ int GildedRose::getIncrease(const Item& item){
 }
 
 void GildedRose::updateEachItem(Item& item){
-    switch (m_Map[item.m_name]) // Insert unknown as key = 0 so enum starts at 1
+    switch (m_Map[item.m_name]) // Insert unknown as value = 0 so enum starts at 1
     {
         case m_specialItem::agedBrie :
             updateBrie(item);
