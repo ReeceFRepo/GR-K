@@ -3,7 +3,6 @@
 
 int main()
 {
-    vector<Item> items;
     GildedRose app;
     app.setItem({"Aged Brie", 4, 10});
     app.setItem({"+5 Dexterity Vest", 10, 20});
