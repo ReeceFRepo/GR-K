@@ -11,12 +11,13 @@ Conjured
 */
 
 void GildedRose::updateNormal(Item& item){
-    if(item.m_quality > m_MINQUAILTY){
-        item.m_quality-=1;
-        if((item.m_sellIn<=0) && (item.m_quality != m_MINQUAILTY))
-        {
-            item.m_quality-=1;
-        }
+    if(item.m_quality <= m_MINQUAILTY)
+        return;
+    
+    --item.m_quality;
+    if((item.m_sellIn<=0) && (item.m_quality != m_MINQUAILTY))
+    {
+        --item.m_quality;
     }
 }
 
